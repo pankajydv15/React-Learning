@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import DarkModeToggle from "../../DarkModeToggle";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-4">
-      <div className="flex items-center flex-shrink-0 text-white mr-12">
+    <nav className="dark:bg-gray-400 bg-gray-700 flex items-center justify-between flex-wrap p-4">
+      <div className="flex items-center flex-shrink-0  mr-12">
         <img
           className="fill-current h-12 w-12 mr-2 rounded-lg"
           src="https://prompti.ai/wp-content/uploads/2023/07/pcboi2.png"
@@ -14,13 +15,11 @@ function Navbar() {
           width="80"
           height="80"
         />
-        <span className="text-red-600 font-semibold text-3xl text-right">
-          REACT
-        </span>
+        <span className="text-red-600 font-semibold text-3xl ml-4">REACT</span>
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="block lg:hidden">
+      <div className="block lg:hidden ">
         <button
           onClick={() => setMenuOpen(!menuOpen)} // Toggle menu visibility
           className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
@@ -40,7 +39,7 @@ function Navbar() {
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto ml-auto`}
+        } w-full ml- block lg:flex lg:items-center lg:w-auto ml-auto`}
       >
         <div className="flex flex-col lg:flex-row lg:space-x-16 text-left font-bold">
           <Link
@@ -67,9 +66,9 @@ function Navbar() {
           >
             ABOUT
           </Link>
-        </div>
 
-        <div>
+
+          <DarkModeToggle/>
           
         </div>
       </div>
