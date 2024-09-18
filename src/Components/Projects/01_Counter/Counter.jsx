@@ -18,6 +18,7 @@ function Counter() {
   };
   return (
     <>
+    <section className="bg-white dark:bg-gray-900 mt-0.5">
       <div className="min-h-screen p-4 rounded-xl mt-4 grid items-center justify-center">
         <div className="w-full max-w-md m-44 mx-auto shadow-md rounded-lg px-8 py-8 text-orange-500 bg-gray-700">
           <h1 className="grid items-center justify-center">Toggle Button</h1>
@@ -38,6 +39,7 @@ function Counter() {
           </button>
         </div>
       </div>
+      </section>
     </>
   );
 }

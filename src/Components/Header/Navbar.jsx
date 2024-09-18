@@ -15,7 +15,7 @@ function Navbar() {
           width="80"
           height="80"
         />
-        <span className="text-red-600 font-semibold text-3xl ml-4">REACT</span>
+        <span className="text-blue-600 font-semibold text-3xl ml-4">REACT</span>
       </div>
 
       {/* Mobile Menu Button */}
@@ -44,25 +44,25 @@ function Navbar() {
         <div className="flex flex-col lg:flex-row lg:space-x-16 text-left font-bold">
           <Link
             to="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-red-600 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-blue-600 hover:text-white mr-4"
           >
             HOME
           </Link>
           <Link
             to="/card"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-red-600 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-blue-600 hover:text-white mr-4"
           >
             PROJECTS
           </Link>
           <Link
             to="/github"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-red-600 hover:text-white"
+            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-blue-600 hover:text-white"
           >
             GITHUB
           </Link>
           <Link
             to="/about"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-red-600 hover:text-white"
+            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-blue-600 hover:text-white"
           >
             ABOUT
           </Link>

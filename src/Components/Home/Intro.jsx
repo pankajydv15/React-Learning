@@ -14,7 +14,7 @@ function Intro() {
 
         <div>
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-serif font-semibold text-gray-900 dark:text-gray-300 mb-6">
-            A Journey Through <span className="text-red-700">Code</span> and <span className="text-red-700">Creativity</span>
+            A Journey Through <span className="text-blue-600">Code</span> and <span className="text-blue-600">Creativity</span>
           </h1>
           <p className="font-serif font-normal mb-4 text-gray-900 dark:text-gray-300">
             This React website is a part of my learning journey, where I&apos;ve

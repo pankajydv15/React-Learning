@@ -1,5 +1,7 @@
 
+// import FormValidation from "../FormValidation/FormValidation";
 import Intro from "./Intro";
+import Crousel from '../Crousel/Crousel'
 
 function Home() {
   return (
@@ -12,8 +14,8 @@ function Home() {
                 <span>Where,</span>
                 <br />
                 <span>
-                  <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium italic text-red-700">
-                    Code Sparks <span className="text-red-700">Creativity</span>
+                  <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium italic text-blue-600">
+                    Code Sparks <span className="text-blue-600">Creativity</span>
                   </span>
                   <br />
                   <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
@@ -41,7 +43,9 @@ function Home() {
 
       
       </section>
+      {/* <FormValidation/> */}
       <Intro/>
+      <Crousel/>
     </>
   );
 }

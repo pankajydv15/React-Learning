@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className="bg-white dark:bg-gray-900 py-10">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">About This App</h2>
+        <h2 className="text-center py-8 rounded-xl text-3xl md:text-4xl lg:text-5xl tracking-tight text-blue-600 font-extrabold italic font-serif">About This App</h2>
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left Side: Image */}

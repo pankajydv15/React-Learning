@@ -3,10 +3,11 @@ import {useState} from 'react'
 function BgChanger() {
     const [color, setColor] = useState("pink")
   return (
+    <section className="bg-white dark:bg-gray-900 mt-0.5">
     <div className='w-full h-screen duration-200'
       style = {{backgroundColor: color}}>
 
-        <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
+        <div className='flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
 
             <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl' > 
                 <button onClick={() => {setColor("Red")}}
@@ -31,8 +32,8 @@ function BgChanger() {
 
                 <button onClick={() => {setColor("Orange")}}
                  className='outline-none px-4 py-1 rounded-full text-white '
-                style={{backgroundColor: "Orange"}} 
-                >Orange</button>
+                 style={{backgroundColor: "Orange"}} 
+                 >Orange</button>
 
                 <button onClick={() => {setColor("yellow")}}
                  className='outline-none px-4 py-1 rounded-full text-white '
@@ -43,6 +44,8 @@ function BgChanger() {
 
         </div>
     </div>
+  </section>
+                 
   )
 }
 
