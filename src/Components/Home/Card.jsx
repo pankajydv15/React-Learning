@@ -28,10 +28,10 @@ function Card() {
               alt=""
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="text-blue-600 mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              <h5 className="text-blue-600 mb-2 text-2xl font-bold tracking-tight ">
                 Counter Project
               </h5>
-              <p className="mb-3 font-normal text-gray-700 text-cyan-400">
+              <p className="mb-3 font-normal text-cyan-400">
                 A simple counter app built with Vite and React, allowing users
                 to increment or decrement a numerical value.
               </p>
@@ -48,10 +48,10 @@ function Card() {
               alt=""
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-blue-600">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-600">
                 Toggle Button{" "}
               </h5>
-              <p className="mb-3 font-normal text-gray-700 text-cyan-400">
+              <p className="mb-3 font-normal  text-cyan-400">
                 The Toggle Button only have the functionality of OFF & ON.
               </p>
             </div>
@@ -67,10 +67,10 @@ function Card() {
               alt=""
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-blue-600">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight  text-blue-600">
                 Background Color Changer
               </h5>
-              <p className="mb-3 font-normal text-gray-700 text-cyan-400">
+              <p className="mb-3 font-normal  text-cyan-400">
                 A User can changes the color of the Background by clicking on
                 the Button.
               </p>
@@ -87,10 +87,10 @@ function Card() {
               alt=""
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-blue-600">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-600">
                 Password Generator
               </h5>
-              <p className="mb-3 font-normal text-gray-700 text-cyan-400">
+              <p className="mb-3 font-normal text-cyan-400">
                 A User can Generate the Password.
               </p>
             </div>
