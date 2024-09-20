@@ -18,12 +18,12 @@ function Footer() {
                 <div>
                     <h2 className="mb-6 text-sm font-semibold text-black uppercase">Resources</h2>
                     <ul className="text-gray-500 font-medium">
-                        <li className="mb-4 text-red-500">
+                        <li className="mb-4 text-blue-600 font-bold">
                             <Link to="/" className="hover:underline">
                                 Home
                             </Link>
                         </li>
-                        <li className='text-red-500'>
+                        <li className='text-blue-600 font-bold'>
                             <Link to="/about" className="hover:underline">
                                 About
                             </Link>

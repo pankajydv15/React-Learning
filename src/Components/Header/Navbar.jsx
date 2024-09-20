@@ -39,30 +39,30 @@ function Navbar() {
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } w-full ml- block lg:flex lg:items-center lg:w-auto ml-auto`}
+        } w-full ml- block lg:flex lg:items-center  lg:w-auto ml-auto`}
       >
         <div className="flex flex-col lg:flex-row lg:space-x-16 text-left font-bold">
           <Link
             to="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-blue-600 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-2xl dark:text-blue-600 text-cyan-400 hover:text-white mr-4"
           >
             HOME
           </Link>
           <Link
             to="/card"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-blue-600 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-2xl dark:text-blue-600 text-cyan-400 hover:text-white mr-4"
           >
             PROJECTS
           </Link>
           <Link
             to="/github"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-blue-600 hover:text-white"
+            className="block mt-4 lg:inline-block lg:mt-0 text-2xl dark:text-blue-600 text-cyan-400 hover:text-white"
           >
             GITHUB
           </Link>
           <Link
             to="/about"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl text-blue-600 hover:text-white"
+            className="block mt-4 lg:inline-block lg:mt-0 text-2xl dark:text-blue-600 text-cyan-400 hover:text-white"
           >
             ABOUT
           </Link>
@@ -70,6 +70,7 @@ function Navbar() {
 
           <DarkModeToggle/>
           
+          <button>LOGIN</button>
         </div>
       </div>
     </nav>

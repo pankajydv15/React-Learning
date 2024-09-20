@@ -5,15 +5,15 @@ function Card() {
     <>
       <section className=" bg-white dark:bg-gray-900">
         <div className="container mt-0.5 ">
-          <h2 className="text-center py-8 rounded-xl text-3xl md:text-4xl lg:text-5xl tracking-tight text-blue-600 font-extrabold italic font-serif">
-            <span className="text-4xl text-blue-600 md:text-5xl">T</span>𝐢𝐧𝐲{" "}
-            <span className="text-4xl text-blue-600 md:text-5xl">P</span>
+          <h2 className="text-center py-8 rounded-xl text-3xl md:text-4xl lg:text-5xl tracking-tight text-blue-600 dark:text-cyan-400 font-extrabold italic font-serif">
+            <span className="text-4xl text-blue-600 dark:text-cyan-400 md:text-5xl">T</span>𝐢𝐧𝐲{" "}
+            <span className="text-4xl text-blue-600 dark:text-cyan-400 md:text-5xl">P</span>
             𝐫𝐨𝐣𝐞𝐜𝐭𝐬,
             <br />
             <span className="ml-10 md:ml-32 lg:ml-48 mt-2">
-              <span className="text-4xl text-blue-600 md:text-5xl">H</span>𝐮𝐠𝐞{" "}
+              <span className="text-4xl text-blue-600 dark:text-cyan-400 md:text-5xl">H</span>𝐮𝐠𝐞{" "}
             </span>
-            <span className="text-4xl text-blue-600 md:text-5xl">L</span>
+            <span className="text-4xl text-blue-600 dark:text-cyan-400 md:text-5xl">L</span>
             𝐞𝐚𝐫𝐧𝐢𝐧𝐠𝐬
           </h2>
         </div>
@@ -28,10 +28,10 @@ function Card() {
               alt=""
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="text-blue-600 mb-2 text-2xl font-bold tracking-tight ">
+              <h5 className="text-blue-600 dark:text-cyan-400 mb-2 text-2xl font-bold tracking-tight ">
                 Counter Project
               </h5>
-              <p className="mb-3 font-normal text-cyan-400">
+              <p className="mb-3 font-normal text-blue-600 dark:text-cyan-400">
                 A simple counter app built with Vite and React, allowing users
                 to increment or decrement a numerical value.
               </p>
@@ -48,10 +48,10 @@ function Card() {
               alt=""
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-600">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-600 dark:text-cyan-400">
                 Toggle Button{" "}
               </h5>
-              <p className="mb-3 font-normal  text-cyan-400">
+              <p className="mb-3 font-normal  text-blue-600 dark:text-cyan-400">
                 The Toggle Button only have the functionality of OFF & ON.
               </p>
             </div>
@@ -67,10 +67,10 @@ function Card() {
               alt=""
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight  text-blue-600">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight  text-blue-600 dark:text-cyan-400">
                 Background Color Changer
               </h5>
-              <p className="mb-3 font-normal  text-cyan-400">
+              <p className="mb-3 font-normal  text-blue-600 dark:text-cyan-400">
                 A User can changes the color of the Background by clicking on
                 the Button.
               </p>
@@ -87,10 +87,10 @@ function Card() {
               alt=""
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-600">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-600 dark:text-cyan-400">
                 Password Generator
               </h5>
-              <p className="mb-3 font-normal text-cyan-400">
+              <p className="mb-3 font-normal text-blue-600 dark:text-cyan-400">
                 A User can Generate the Password.
               </p>
             </div>

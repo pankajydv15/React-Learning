@@ -18,9 +18,9 @@ const App = () => {
   return (
 
     
-    <div className="bg-white dark:bg-gray-900 ">
+    <div className="bg-white dark:bg-gray-900 mt-0.5">
       <div className="container mx-auto px-10">
-        <h2>Carousel Component</h2>
+        <h2 className="text-center py-8 rounded-xl text-3xl md:text-4xl lg:text-5xl tracking-tight text-blue-600 font-extrabold italic font-serif"> Interactive React Creations Unveiled</h2>
         <Slider {...settings}>
           <div >
             <div className="bg-white dark:bg-gray-900 relative flex flex-col md:flex-row w-full my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
@@ -201,6 +201,7 @@ const App = () => {
               </div>
             </div>
           </div>
+
         </Slider>
       </div>
     </div>
