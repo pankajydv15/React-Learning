@@ -14,7 +14,7 @@ function Signup() {
     if (!name || !password || !email) {
       setErr("All fields are required");
     } else if (password.length < 4) {
-      setErr("Password Must be at least 8 char");
+      setErr("Password Must be at least 4 char");
     } else {
       setErr("");
       const userdata = {
