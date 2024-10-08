@@ -1,9 +1,17 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import DarkModeToggle from "../../DarkModeToggle";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Logout function
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn"); // Clear login status from localStorage
+    navigate("/login"); // Redirect to login page
+  };
 
   return (
     <nav className="dark:bg-gray-400 bg-gray-700 flex items-center justify-between flex-wrap p-4">
@@ -19,9 +27,9 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="block lg:hidden ">
+      <div className="block lg:hidden">
         <button
-          onClick={() => setMenuOpen(!menuOpen)} // Toggle menu visibility
+          onClick={() => setMenuOpen(!menuOpen)}
           className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
         >
           <svg
@@ -41,36 +49,65 @@ function Navbar() {
           menuOpen ? "block" : "hidden"
         } w-full ml- block lg:flex lg:items-center  lg:w-auto ml-auto`}
       >
-        <div className="flex flex-col lg:flex-row lg:space-x-16 text-left font-bold">
+        <div className="flex flex-col lg:flex-row lg:space-x-16 text-left font-serif font-bold">
           <Link
             to="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl dark:text-blue-600 text-cyan-400 hover:text-white mr-4"
+            className={`block mt-4 lg:inline-block lg:mt-0 text-2xl ${
+              location.pathname === "/"
+                ? "dark:text-white text-white"
+                : "dark:text-blue-600 text-cyan-400"
+            } hover:text-white mr-4`}
           >
-            HOME
+            Home
           </Link>
           <Link
-            to="/card"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl dark:text-blue-600 text-cyan-400 hover:text-white mr-4"
+            to="/Projects"
+            className={`block mt-4 lg:inline-block lg:mt-0 text-2xl ${
+              location.pathname === "/Projects"
+                ? "dark:text-white text-white"
+                : "dark:text-blue-600 text-cyan-400"
+            } hover:text-white mr-4`}
           >
-            PROJECTS
+            Projects
           </Link>
           <Link
             to="/github"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl dark:text-blue-600 text-cyan-400 hover:text-white"
+            className={`block mt-4 lg:inline-block lg:mt-0 text-2xl ${
+              location.pathname === "/github"
+                ? "dark:text-white text-white"
+                : "dark:text-blue-600 text-cyan-400"
+            } hover:text-white`}
           >
-            GITHUB
+            Github
           </Link>
           <Link
             to="/about"
-            className="block mt-4 lg:inline-block lg:mt-0 text-2xl dark:text-blue-600 text-cyan-400 hover:text-white"
+            className={`block mt-4 lg:inline-block lg:mt-0 text-2xl ${
+              location.pathname === "/about"
+                ? "dark:text-white text-white"
+                : "dark:text-blue-600 text-cyan-400"
+            } hover:text-white`}
           >
-            ABOUT
+            About
           </Link>
 
+          <DarkModeToggle />
 
-          <DarkModeToggle/>
-          
-          <button>LOGIN</button>
+          {/* Logout Button */}
+          {localStorage.getItem("isLoggedIn") ? (
+            <button
+              onClick={handleLogout}
+              className="text-white bg-red-500 px-4 py-2 rounded-md mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto text-center"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/Login">
+              <button className="text-white bg-blue-500 px-4 py-2 rounded-md mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto text-center">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </nav>
