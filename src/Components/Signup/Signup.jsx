@@ -1,22 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 function Signup() {
-
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password,setPassword] = useState('')
-  const [err, setErr] = useState('')
-  const [success, setSuccess] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [err, setErr] = useState('');
+  const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false); // Loading state
 
   const handelForm = async (e) => {
     e.preventDefault();
+    setLoading(true); // Start loading when the form is submitted
 
     if (!name || !password || !email) {
-      setErr("All fields are required");
+      setErr('All fields are required');
+      setLoading(false); // Stop loading
     } else if (password.length < 4) {
-      setErr("Password Must be at least 4 char");
+      setErr('Password Must be at least 4 char');
+      setLoading(false); // Stop loading
     } else {
-      setErr("");
+      setErr('');
       const userdata = {
         name,
         email,
@@ -24,32 +27,33 @@ function Signup() {
       };
 
       try {
-        const response = await fetch("https://reactbackend-hv2w.onrender.com/signup", {
-          method: "POST",
+        const response = await fetch('https://reactbackend-hv2w.onrender.com/signup', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(userdata),
         });
         const result = await response.json();
         if (response.ok) {
-          setSuccess("signup Succussful");
-          setName("");
-          setEmail("");
-          setPassword("");
+          setSuccess('Signup Successful');
+          setName('');
+          setEmail('');
+          setPassword('');
         } else {
-          setErr(result.message || "signupFailed");
+          setErr(result.message || 'Signup Failed');
         }
       } catch (error) {
-        setErr("Error submitting the form. Please try again.");
+        setErr('Error submitting the form. Please try again.');
+      } finally {
+        setLoading(false); // Stop loading once the request finishes
       }
     }
   };
+
   return (
     <section className="bg-white dark:bg-gray-900 py-16">
-
       <div className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        {/* Left side with the image */}
         <div className="flex justify-center items-center">
           <img
             className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
@@ -58,17 +62,18 @@ function Signup() {
           />
         </div>
 
-
-        {/* Right side with the form */}
         <div>
           <div className="max-w-lg mx-auto sm:px-6 lg:px-8">
             <div className="p-8 bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg">
               <h1 className="text-3xl sm:text-4xl text-gray-800 dark:text-white font-extrabold mb-6">
                 SIGNUP
               </h1>
-              <form  onSubmit={handelForm} className="flex flex-col">
+              <form onSubmit={handelForm} className="flex flex-col">
                 <div className="flex flex-col mb-4">
-                  <label htmlFor="name" className="text-gray-700 dark:text-gray-300 font-semibold">
+                  <label
+                    htmlFor="name"
+                    className="text-gray-700 dark:text-gray-300 font-semibold"
+                  >
                     Full Name
                   </label>
                   <input
@@ -82,7 +87,10 @@ function Signup() {
                 </div>
 
                 <div className="flex flex-col mb-4">
-                  <label htmlFor="email" className="text-gray-700 dark:text-gray-300 font-semibold">
+                  <label
+                    htmlFor="email"
+                    className="text-gray-700 dark:text-gray-300 font-semibold"
+                  >
                     Email
                   </label>
                   <input
@@ -96,7 +104,10 @@ function Signup() {
                 </div>
 
                 <div className="flex flex-col mb-4">
-                  <label htmlFor="password" className="text-gray-700 dark:text-gray-300 font-semibold">
+                  <label
+                    htmlFor="password"
+                    className="text-gray-700 dark:text-gray-300 font-semibold"
+                  >
                     Password
                   </label>
                   <input
@@ -109,13 +120,17 @@ function Signup() {
                   />
                 </div>
 
-                {err && <p style={{ color: "red" }}>{err}</p>}
-                {success && <p style={{ color: "green" }}>{success}</p>}
+                {err && <p style={{ color: 'red' }}>{err}</p>}
+                {success && <p style={{ color: 'green' }}>{success}</p>}
+                {/* Display loading message */}
+                {loading && <p style={{ color: 'blue' }}>Loading...</p>}
+                
                 <button
                   type="submit"
                   className="w-full bg-orange-600 text-white font-bold py-3 px-6 rounded-lg mt-4 hover:bg-orange-500 transition-colors ease-in-out duration-300"
+                  disabled={loading} // Disable the button while loading
                 >
-                  Submit
+                  {loading ? 'Submitting...' : 'Submit'}
                 </button>
               </form>
             </div>
@@ -123,7 +138,7 @@ function Signup() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Signup
+export default Signup;
