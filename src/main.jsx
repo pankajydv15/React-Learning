@@ -4,6 +4,7 @@ import ProtectedRoute from "./ProtectedRoutes";
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 // import App from './App.jsx'
 import './index.css'
+import NotFound from './Components/NotFound'; 
 import Routes from './Routes'
 import Home from './Components/Home/Home'
 import Card from './Components/Home/Card'
@@ -95,6 +96,7 @@ const router= createBrowserRouter(
           }
         />
       <Route path='/Signup' element= {<Signup/>}/>
+      <Route path="*" element={<NotFound />} />
 
     </Route>
   )

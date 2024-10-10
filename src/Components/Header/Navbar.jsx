@@ -71,7 +71,7 @@ function Navbar() {
             Projects
           </Link>
           <Link
-            to="/github"
+            to="/Github"
             className={`block mt-4 lg:inline-block lg:mt-0 text-2xl ${
               location.pathname === "/github"
                 ? "dark:text-white text-white"
@@ -81,7 +81,7 @@ function Navbar() {
             Github
           </Link>
           <Link
-            to="/about"
+            to="/About"
             className={`block mt-4 lg:inline-block lg:mt-0 text-2xl ${
               location.pathname === "/about"
                 ? "dark:text-white text-white"
