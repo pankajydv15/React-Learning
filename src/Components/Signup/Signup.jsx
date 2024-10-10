@@ -123,7 +123,8 @@ function Signup() {
                 {err && <p style={{ color: 'red' }}>{err}</p>}
                 {success && <p style={{ color: 'green' }}>{success}</p>}
                 {/* Display loading message */}
-                {loading && <p style={{ color: 'blue' }}>Loading...</p>}
+                {loading && <p className='text-green-500'>Loading...</p>}
+                
                 
                 <button
                   type="submit"
